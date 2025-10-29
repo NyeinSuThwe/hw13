@@ -61,42 +61,43 @@ a:hover {
   height: 500px;
   width: 400px;
   
+/* [3] grid demos */
+
+/* rows-columns.html demo */
+.grid {
+  display: grid;
+  /* grid-template-columns: 100px 50% 200px; */
+  /* grid-template-rows: 40% 50% 50px; */
+  /* grid-template: 40% 50% 50px / 100px 50% 200px; */
+  grid-template: 1fr 1fr 1fr / 1fr 2fr 1fr;
+  width: 100%;
+  height: 100%;
+  gap: 5px;
 }
 
+/* repeat.html demo */
 .grid-repeat {
-  margin: 10px auto 50px;
-  border: 2px solid #001e1d;
-  height: 500px;
-  width: 400px;
   display: grid;
-  
+  grid-template: repeat(3, 1fr) / repeat(2, 3fr 1fr);
+  width: 100%;
+  height: 100%;
+  gap: 5px;
 }
 
-.grid-minmax{
-  margin: 10px auto 50px;
-  border: 2px solid #001e1d;
-  height: 500px;
+/* min-max.html demo */
+.grid-minmax {
   display: grid;
- 
-  
+  grid-template: repeat(3, 1fr) / 1fr minmax(400px, 1fr);
+  gap: 20px 5px;
+  width: 100%;
+  height: 100%;
 }
 
-.grid-area{
-  margin: 10px auto 50px;
-  border: 2px solid #001e1d;
-  height: 500px;
+/* area.html demo */
+.grid-area {
   display: grid;
   grid-template: repeat(6, 1fr) / repeat(3, 1fr);
-}
-
-.one {
-
-}
-
-.two {
-
-}
-
-.four {
-  
+  width: 100%;
+  height: 100%;
+  gap: 5px;
 }
